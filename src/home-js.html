@@ -1,0 +1,20 @@
+<script>
+
+  document.getElementById("enviarDados").addEventListener("click", preencherPlanilha);
+
+      function preencherPlanilha(){
+
+        //objeto atividade:
+        var atividade = {};
+        atividade.descricao = document.getElementById("descricaoAtividade").value;
+        atividade.status = document.getElementById("statusAtividade").value;
+
+        google.script.run.usuarioClicou(atividade);
+
+        //limpa os campos para recarregamento
+        document.getElementById("descricaoAtividade").value = "";
+        document.getElementById("statusAtividade").value = "";
+      }
+
+
+</script>
